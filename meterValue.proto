@@ -10,8 +10,17 @@ message Dates {
 
 // Response for meter usage values
 // dictionary formatted as string
-message dateValues {
-    string values = 1;
+// message dateValues {
+//    string values = 1;
+//}
+
+ message DataPoint {
+    double startDate = 1;
+    double value = 2; 
+}
+
+ message dateValues {
+    repeated DataPoints datapoints = 1;
 }
 
 // Service Definition
